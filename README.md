@@ -41,10 +41,17 @@ model = infer_trajectories(dataset_wrap,
 			    ti_scfates_tree(), 
 			    parameters = list(tree_method="ppt"), # or epg
 			    verbose = TRUE, return_verbose = TRUE, debug = FALSE)
+<<<<<<< HEAD
 model$model = map(model$model, add_cell_waypoints)
+=======
+modelmodel=map(modelmodel = map(modelmodel, add_cell_waypoints)
+>>>>>>> d9c447cbe19d135c99638ee89897caae63513cac
 metric <- map_dfr(model$model,
                   dyneval::calculate_metrics,
                   dataset = dataset,
                   metrics = c("featureimp_wcor", "him",  "F1_branches", "correlation")) 
 ```                        
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9c447cbe19d135c99638ee89897caae63513cac
