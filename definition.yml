@@ -1,0 +1,113 @@
+method:
+  id: MGPfact
+  name: MGPfact
+  tool_id: MGPfact
+  source: tool
+  platform: Julia
+  url: https://github.com/renjun0324/MGPfact.jl
+  license: MIT
+  authors:
+  - given: Jun
+    family: Ren
+    email: renjun0324@hotmail.com
+    github: renjun0324
+
+wrapper:
+  type: trajectory
+  topology_inference: free
+  trajectory_types:
+  - linear
+  - bifurcation
+  - convergence
+  - multifurcation
+  - binary_tree
+  - tree
+  input_required: 
+  - counts
+  - start_id
+  
+parameters:    
+  - id: dataset_id
+    type: character
+    default: data1
+    values:
+    - data1
+    
+  - id: trajectory_type
+    type: character
+    default: consensus_tree
+    values:
+    - linear
+    - binary_tree
+    - consensus_tree
+    - consensus_tree_proj
+    description: trajectory type
+    
+  - id: omega
+    type: numeric
+    default: 0.7
+    distribution:
+      type: uniform
+      lower: 0
+      upper: 1
+    description: MURP parameters
+    
+  - id: max_murp
+    type: integer
+    default: 300
+    distribution:
+      type: uniform
+      lower: 100
+      upper: 1000
+    description: maximum number of murps
+    
+  - id: iterations
+    type: integer
+    default: 2000
+    distribution:
+      type: uniform
+      lower: 100
+      upper: 10000
+    description: iterations in the optimization
+    
+  - id: chains_number
+    type: integer
+    default: 1
+    distribution:
+      type: uniform
+      lower: 1
+      upper: 10
+    description: the number of chains
+
+  - id: trajectory_number
+    type: integer
+    default: 3
+    distribution:
+      type: uniform
+      lower: 1
+      upper: 5
+    description: the number of trajectory
+    
+  - id: murp_pca_center
+    type: logical
+    default: no
+    description: Should the PCA parameter setting for murp include centering?
+    
+  - id: murp_pca_scale
+    type: logical
+    default: no
+    description: Should the PCA parameter setting for murp include scaling? 
+    
+  - id: murp_pc_number
+    type: integer
+    default: 3
+    distribution:
+      type: uniform
+      lower: 1
+      upper: 5
+    description: the number of murp pc
+
+  - id: need_root
+    type: logical
+    default: yes
+    description: the number of murp pc
