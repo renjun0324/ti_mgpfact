@@ -1,22 +1,20 @@
 
 
-# ti_scfates_tree
-A docker container for scFates, primarily for cell trajectory inference analysis of single-cell RNA-seq data.
+# ti_mgpfact
+A Docker container for MGPfact has been developed based on [MGPfact.jl](https://github.com/renjun0324/MGPfact.jl) and [MGPfactR](https://github.com/renjun0324/MGPfactR). It is designed for one-click trajectory reconstruction and includes multiple forms of trajectory visualization.
 
-The container was edited to follow the main scFates process, retaining some of the parameter settings, especially the tree learning methods, including 'Elastic Principal Graph (epg)' and 'simpleppt (ppt)'. Notably, we did not keep cellrank-related functions in it.
+## ti_mgpfact repository and help document
 
-
-## scFates repository and help document
 ```shell
-https://github.com/LouisFaure/scFates
+https://github.com/renjun0324/MGPfact.jl
 
-https://scfates.readthedocs.io/en/latest/
+https://github.com/renjun0324/MGPfactR
 
 ```
 
 ## pull container
 ```shell
-docker pull renjun0324/ti_scfates_tree
+docker pull renjun0324/ti_mgpfact
 ```
 
 ## quick start
@@ -36,14 +34,14 @@ dataset <- wrap_expression(
   expression = fibroblast_reprogramming_treutlein$expression
 )
                                
-ti_scfates_tree = create_ti_method_container("renjun0324/ti_scfates_tree:v0.1.0")
+ti_mgpfact = create_ti_method_container("renjun0324/ti_mgpfact:v0.2.0")
 model = infer_trajectories(dataset_wrap, 
-			    ti_scfates_tree(), 
+			    ti_mgpfact(), 
 			    parameters = list(tree_method="ppt"), # or epg
 			    verbose = TRUE, return_verbose = TRUE, debug = FALSE)
-<<<<<<< HEAD
+
 model$model = map(model$model, add_cell_waypoints)
-=======
+
 modelmodel=map(modelmodel = map(modelmodel, add_cell_waypoints)
 >>>>>>> d9c447cbe19d135c99638ee89897caae63513cac
 metric <- map_dfr(model$model,
@@ -51,7 +49,3 @@ metric <- map_dfr(model$model,
                   dataset = dataset,
                   metrics = c("featureimp_wcor", "him",  "F1_branches", "correlation")) 
 ```                        
-<<<<<<< HEAD
-
-=======
->>>>>>> d9c447cbe19d135c99638ee89897caae63513cac
