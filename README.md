@@ -34,8 +34,8 @@ ti_mgpfact = create_ti_method_container("renjun0324/ti_mgpfact")
 
 # running model
 model = infer_trajectories(dataset_wrap, 
-						   ti_mgpfact(), 
-	                       parameters = list(dataset_id = "myproject",
+                           ti_mgpfact(), 
+                           parameters = list(dataset_id = "myproject",
                                              max_murp = 20,
                                              trajectory_number = 3,
                                              murp_pc_number = 3,
@@ -44,9 +44,9 @@ model = infer_trajectories(dataset_wrap,
                                              iterations = 100,
                                              chains_number = 3,
                                              trajectory_type = "consensus_tree"),
-						    verbose = TRUE, 
-						    return_verbose = TRUE, 
-						    debug = FALSE)
+                           verbose = TRUE, 
+                           return_verbose = TRUE, 
+                           debug = FALSE)
 save(model, file = "model.rda")
 
 # plot trajectory
@@ -69,6 +69,5 @@ p = wrap_plots(list(p1, p2, p3, p4), nrow = 2)
 ggsave("trajectory.png", p, width = 8, height = 8)
 ```
 
-<div align=center><img src="trajectory.png" width="650"></div>ences
-
+<div align=center><img src="trajectory.png" width="650"></div>
 
