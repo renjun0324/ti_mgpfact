@@ -80,13 +80,13 @@ MGPfact can extract different differentiation processes from the same data throu
 
 <div align=center><img src="test/binary_tree_topology2.png" width="650"></div>
 
-### consensus trajectory 
+### consensus tree 
 
 The consensus trajectory representing the process of data differentiation
 
 <div align=center><img src="test/consensus_tree2.png" width="400"></div>
 
-### consensus trajectory  projection
+### consensus projection
 
 Two-dimensional spatial embedding representation of consensus trajectory.
 
