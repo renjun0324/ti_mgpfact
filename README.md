@@ -72,7 +72,6 @@ p4 = plot_dimred(model_p) +  guides(fill = "none", color = "none") + theme(plot.
 p = wrap_plots(list(p1, p2, p3, p4), nrow = 1)
 ggsave("trajectory.png", p, width = 15, height = 5)
 ```
-
 <div align=center><img src="test/linear.png" width="650"></div>
 
 ### binary tree
@@ -91,5 +90,5 @@ The consensus trajectory representing the process of data differentiation
 
 Two-dimensional spatial embedding representation of consensus trajectory.
 
-<div align=center><img src="test/consensus_projection.png" width="550"></div>
+<div align=center><img src="test/consensus_projection.png" width="400"></div>
 
