@@ -78,7 +78,7 @@ ggsave("trajectory.png", p, width = 15, height = 5)
 
 MGPfact can extract different differentiation processes from the same data through factorization. We can output different trajectories based on the **binary_tree_index**. However, due to the limitations of the docker container, if we reconstruct three differentiation trajectories, we need to run it three times to get the results for three trajectories.
 
-<div align=center><img src="test/binary_tree_topology.png" width="650"></div>
+<div align=center><img src="test/binary_tree_topology2.png" width="650"></div>
 
 ### consensus trajectory 
 
