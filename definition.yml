@@ -111,3 +111,12 @@ parameters:
     type: logical
     default: yes
     description: the number of murp pc
+
+  - id: binary_tree_index
+    type: integer
+    default: 2
+    distribution:
+      type: uniform
+      lower: 1
+      upper: 5
+    description: Index of the binary tree, less than or equal to the number of trajectories
