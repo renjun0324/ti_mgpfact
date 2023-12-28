@@ -84,7 +84,7 @@ MGPfact can extract different differentiation processes from the same data throu
 
 The consensus trajectory representing the process of data differentiation
 
-<div align=center><img src="test/consensus_tree2.png" width="650"></div>
+<div align=center><img src="test/consensus_tree2.png" width="400"></div>
 
 ### consensus trajectory  projection
 
